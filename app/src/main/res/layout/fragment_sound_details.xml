@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_dark"
+    tools:context=".presenter.SoundDetailsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent">
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginVertical="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="@color/white"
+            app:cardCornerRadius="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/item_soundDetails_txtType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/txt_type"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/item_soundDetails_txtId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/txt_id"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/item_soundDetails_txtType" />
+
+
+                <TextView
+                    android:id="@+id/item_soundDetails_txtAncActivated"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/txt_ancActivated"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/item_soundDetails_txtId" />
+
+
+                <TextView
+                    android:id="@+id/item_soundDetails_txtFrequency"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/txt_frequency"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/item_soundDetails_txtAncActivated" />
+
+
+                <TextView
+                    android:id="@+id/item_soundDetails_txtChannel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/txt_channel"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/item_soundDetails_txtFrequency" />
+
+
+                <TextView
+                    android:id="@+id/item_soundDetails_txtHearThreDiff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/txt_hearing_threshold_difference"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/item_soundDetails_txtChannel" />
+
+                <TextView
+                    android:id="@+id/item_soundDetails_txtAvgSoundPressure"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/txt_avg_sound_pressure_level_difference"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/item_soundDetails_txtHearThreDiff" />
+
+
+                <TextView
+                    android:id="@+id/item_soundDetails_txtInstantSoundPressure"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/txt_instant_sound_pressure_level_difference"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/item_soundDetails_txtAvgSoundPressure" />
+
+                <TextView
+                    android:id="@+id/item_soundDetails_txtAvgDistanceDifference"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/txt_avg_distance_difference"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/item_soundDetails_txtInstantSoundPressure" />
+
+
+                <TextView
+                    android:id="@+id/item_soundDetails_txtFreqInstantIntensity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/txt_freq_instant_intensity_difference"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/item_soundDetails_txtAvgDistanceDifference" />
+
+
+                <TextView
+                    android:id="@+id/item_soundDetails_txtFreqAvgIntensityDiff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/txt_freq_avg_intensity_difference"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/item_soundDetails_txtFreqInstantIntensity" />
+
+
+                <TextView
+                    android:id="@+id/item_soundDetails_txtLastUpdate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/txt_last_update"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/item_soundDetails_txtFreqAvgIntensityDiff" />
+
+
+                <TextView
+                    android:id="@+id/item_soundDetails_txtTimestamp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/txt_timestamp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/item_soundDetails_txtLastUpdate" />
+
+                <TextView
+                    android:id="@+id/item_soundDetails_txtPatient"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/txt_patient"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/item_soundDetails_txtTimestamp" />
+
+
+                <!-- <TextView
+                     android:id="@+id/item_soundDetails_txtIdResult"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_marginStart="4dp"
+                     android:layout_marginTop="8dp"
+                     android:text="@string/txt_Int"
+                     android:textColor="@color/blue"
+                     app:layout_constraintStart_toEndOf="@+id/item_soundDetails_txtId"
+                     app:layout_constraintTop_toBottomOf="@+id/item_soundDetails_txtType" />-->
+
+
+                <!--<TextView
+                    android:id="@+id/item_soundDetails_txtAncActivatedResult"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/txt_String"
+                    android:textColor="@color/red"
+                    app:layout_constraintStart_toEndOf="@+id/item_soundDetails_txtAncActivated"
+                    app:layout_constraintTop_toBottomOf="@+id/item_soundDetails_txtIdResult" />
+-->
+<!--
+
+                <TextView
+                    android:id="@+id/item_soundDetails_txtFrequencyResult"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/txt_Int"
+                    android:textColor="@color/blue"
+                    app:layout_constraintStart_toEndOf="@+id/item_soundDetails_txtFrequency"
+                    app:layout_constraintTop_toBottomOf="@+id/item_soundDetails_txtAncActivatedResult" />
+-->
+
+
+             <!--   <TextView
+                    android:id="@+id/item_soundDetails_txtChannelResult"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/txt_String"
+                    android:textColor="@color/green"
+                    app:layout_constraintStart_toEndOf="@+id/item_soundDetails_txtChannel"
+                    app:layout_constraintTop_toBottomOf="@+id/item_soundDetails_txtFrequencyResult" />-->
+
+              <!--  <TextView
+                    android:id="@+id/item_soundDetails_txtHearThreDiffResult"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/txt_Int"
+                    android:textColor="@color/blue"
+                    app:layout_constraintStart_toEndOf="@+id/item_soundDetails_txtHearThreDiff"
+                    app:layout_constraintTop_toBottomOf="@+id/item_soundDetails_txtChannelResult" />-->
+
+                <!--      <TextView
+                    android:id="@+id/item_soundDetails_txtAvgDistanceDifferenceResult"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/txt_Int"
+                    android:textColor="@color/blue"
+                    app:layout_constraintStart_toEndOf="@+id/item_soundDetails_txtAvgDistanceDifference"
+                    app:layout_constraintTop_toBottomOf="@+id/item_soundDetails_txtInstantSoundPressureResult" />
+-->
+                <!--  <TextView
+                      android:id="@+id/item_soundDetails_txtFreqInstantIntensityResult"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginStart="4dp"
+                      android:layout_marginTop="8dp"
+                      android:text="@string/txt_Int"
+                      android:textColor="@color/blue"
+                      app:layout_constraintStart_toEndOf="@+id/item_soundDetails_txtFreqInstantIntensity"
+                      app:layout_constraintTop_toBottomOf="@+id/item_soundDetails_txtAvgDistanceDifferenceResult" />-->
+
+           <!--     <TextView
+                    android:id="@+id/item_soundDetails_txtFreqAvgIntensityDiffResult"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/txt_Int"
+                    android:textColor="@color/blue"
+                    app:layout_constraintStart_toEndOf="@+id/item_soundDetails_txtFreqAvgIntensityDiff"
+                    app:layout_constraintTop_toBottomOf="@+id/item_soundDetails_txtFreqInstantIntensityResult" />
+--><!--
+                <TextView
+                    android:id="@+id/item_soundDetails_txtLastUpdateResult"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/txt_String"
+                    android:textColor="@color/green"
+                    app:layout_constraintStart_toEndOf="@+id/item_soundDetails_txtLastUpdate"
+                    app:layout_constraintTop_toBottomOf="@+id/item_soundDetails_txtFreqAvgIntensityDiffResult" />
+-->
+       <!--         <TextView
+                    android:id="@+id/item_soundDetails_txtTimestampResult"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/txt_String"
+                    android:textColor="@color/green"
+                    app:layout_constraintStart_toEndOf="@+id/item_soundDetails_txtTimestamp"
+                    app:layout_constraintTop_toBottomOf="@+id/item_soundDetails_txtLastUpdateResult" />
+--><!--
+                <TextView
+                    android:id="@+id/item_soundDetails_txtPatientResult"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/txt_Int"
+                    android:textColor="@color/blue"
+                    app:layout_constraintStart_toEndOf="@+id/item_soundDetails_txtPatient"
+                    app:layout_constraintTop_toBottomOf="@+id/item_soundDetails_txtTimestampResult" />-->
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include
+        android:id="@+id/layoutLoading"
+        layout="@layout/base_layout_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent" />
+
+    <include
+        android:id="@+id/layoutNoConnection"
+        layout="@layout/base_layout_no_connection"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent" />
+
+    <include
+        android:id="@+id/layoutTimeOut"
+        layout="@layout/base_layout_timeout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent" />
+
+    <include
+        android:id="@+id/layoutGenericError"
+        layout="@layout/base_layout_generic_error"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent" />
+
+    <include
+        android:id="@+id/layoutWithoutResults"
+        layout="@layout/base_layout_without_results"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

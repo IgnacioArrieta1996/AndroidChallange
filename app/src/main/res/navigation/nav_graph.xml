@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/soundListFragment"
+
+    >
+    <fragment
+        android:id="@+id/soundListFragment"
+        android:name="com.example.challangeandroid.presenter.SoundListFragment"
+        android:label="fragment_sound_list"
+        tools:layout="@layout/fragment_sound_list">
+        <action
+            android:id="@+id/action_soundListFragment_to_soundDetailsFragment"
+            app:destination="@id/soundDetailsFragment"
+            app:enterAnim="@anim/animation_two" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/soundDetailsFragment"
+        android:name="com.example.challangeandroid.presenter.SoundDetailsFragment"
+        android:label="fragment_sound_details"
+        tools:layout="@layout/fragment_sound_details">
+        <argument
+            android:name="sound"
+            app:argType="com.example.challangeandroid.domain.model.Sound" />
+    </fragment>
+
+</navigation>
