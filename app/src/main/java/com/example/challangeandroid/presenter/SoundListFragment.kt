@@ -1,8 +1,6 @@
 package com.example.challangeandroid.presenter
 
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
 import android.util.Log
 import android.view.View
 import android.view.animation.AnimationUtils
@@ -12,13 +10,11 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.androidchallenge.presenter.adapter.SoundAdapter
-import com.androidchallenge.presenter.viewmodel.UsoundViewModel
+import com.example.challangeandroid.presenter.viewmodel.UsoundViewModel
 import com.example.challangeandroid.R
-import com.example.challangeandroid.data.network.response.SoundResponse
 import com.example.challangeandroid.databinding.FragmentSoundListBinding
 import com.example.challangeandroid.domain.model.Sound
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.android.synthetic.main.fragment_sound_list.*
 
 
 @AndroidEntryPoint
@@ -35,8 +31,9 @@ class SoundListFragment : Fragment(R.layout.fragment_sound_list) {
         adapter = SoundAdapter(mutableListOf()) { sound ->
             onItemSelected(sound)
         }
+
+        viewModel.getListFromRoom()
         setupObserversViewModel()
-        viewModel.fetchSounds()
         bindData()
 
     }
@@ -69,6 +66,15 @@ class SoundListFragment : Fragment(R.layout.fragment_sound_list) {
         viewModel.soundLiveData.observe(viewLifecycleOwner, { list ->
             initRecycler(list)
             Log.d("mylogs", "livedata: ${list}")
+        })
+
+        viewModel.roomListLiveData.observe(viewLifecycleOwner, Observer {
+            if (it.isNullOrEmpty()){
+
+            } else{
+                initRecycler(it)
+            }
+            Log.d("roomlista", it.toString())
         })
     }
 
@@ -107,7 +113,11 @@ class SoundListFragment : Fragment(R.layout.fragment_sound_list) {
         val action =
             SoundListFragmentDirections.actionSoundListFragmentToSoundDetailsFragment(sound)
         findNavController().navigate(action)
+    }
 
+    private fun fetchData(){
+        viewModel.fetchSounds()
+        setupObserversViewModel()
     }
 
 

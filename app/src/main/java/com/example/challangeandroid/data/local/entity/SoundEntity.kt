@@ -7,7 +7,7 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "sound_table")
 data class SoundEntity(
 
-    @PrimaryKey(autoGenerate = true)
+    @PrimaryKey(autoGenerate = false)
     @ColumnInfo(name = "id") val id: Int = 0,
 
     @ColumnInfo(name = "type") val type: String = "",

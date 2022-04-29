@@ -1,0 +1,112 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "78b65b190e767658580434c2047ed542",
+    "entities": [
+      {
+        "tableName": "sound_table",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `type` TEXT NOT NULL, `anc_activated` INTEGER NOT NULL, `frequency` INTEGER NOT NULL, `channel` TEXT NOT NULL, `hearing_threshold_difference` REAL NOT NULL, `avg_sound_pressure_level_difference` REAL NOT NULL, `instant_sound_pressure_level_difference` REAL NOT NULL, `avg_distance_difference` REAL NOT NULL, `freq_instant_intensity_difference` REAL NOT NULL, `freq_avg_intensity_difference` REAL NOT NULL, `last_update` TEXT NOT NULL, `timestamp` TEXT NOT NULL, `patient` INTEGER NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "type",
+            "columnName": "type",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "ancActivated",
+            "columnName": "anc_activated",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "frequency",
+            "columnName": "frequency",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "channel",
+            "columnName": "channel",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "hearingThresholdDifference",
+            "columnName": "hearing_threshold_difference",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "avgSoundPressureLevelDifference",
+            "columnName": "avg_sound_pressure_level_difference",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "instantSoundPressureLevelDifference",
+            "columnName": "instant_sound_pressure_level_difference",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "avgDistanceDifference",
+            "columnName": "avg_distance_difference",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "freqInstantIntensityDifference",
+            "columnName": "freq_instant_intensity_difference",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "freqAvgIntensityDifference",
+            "columnName": "freq_avg_intensity_difference",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lastUpdate",
+            "columnName": "last_update",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "timestamp",
+            "columnName": "timestamp",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "patient",
+            "columnName": "patient",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '78b65b190e767658580434c2047ed542')"
+    ]
+  }
+}

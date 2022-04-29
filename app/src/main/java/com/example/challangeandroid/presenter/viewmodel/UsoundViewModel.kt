@@ -1,4 +1,4 @@
-package com.androidchallenge.presenter.viewmodel
+package com.example.challangeandroid.presenter.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -6,6 +6,7 @@ import androidx.lifecycle.viewModelScope
 import com.example.challangeandroid.data.network.response.SoundResponse
 import com.example.challangeandroid.domain.GetSoundUseCase
 import com.example.challangeandroid.domain.model.Sound
+import com.example.challangeandroid.domain.model.toDomain
 import com.highquality.base.data.Response
 import com.highquality.base.exception.NoInternetException
 import com.highquality.base.presenter.BaseViewModel
@@ -25,6 +26,14 @@ class UsoundViewModel @Inject constructor(
     private val mutableSound: MutableLiveData<List<Sound>> = MutableLiveData()
     val soundLiveData: LiveData<List<Sound>> = mutableSound
 
+    /*private val isDbEmpty : MutableLiveData<Boolean> = MutableLiveData()
+    val isDbEmptyLiveData: LiveData<Boolean> = isDbEmpty*/
+
+    private val romList : MutableLiveData<List<Sound>> = MutableLiveData()
+    val roomListLiveData: LiveData<List<Sound>> = romList
+
+
+
     fun fetchSounds() {
         viewModelScope.launch {
             notifyShowLoading()
@@ -33,6 +42,7 @@ class UsoundViewModel @Inject constructor(
                 when (it) {
                     is Response.Success<List<Sound>> -> {
                         mutableSound.value = it.data!!
+                        getSoundUseCase.insertSoundList(it.data.map { it.toDomain() })
                     }
 
                     is Response.Failure<Exception> -> {
@@ -49,6 +59,17 @@ class UsoundViewModel @Inject constructor(
                     }
 
                 }
+            }
+        }
+    }
+
+
+
+    fun getListFromRoom(){
+
+        viewModelScope.launch {
+            getSoundUseCase.getSoundsFromRoomDb().collect {
+                romList.value = it
             }
         }
     }

@@ -57,3 +57,20 @@ fun SoundEntity.toDomain() = Sound(
     timestamp,
     patient
 )
+
+fun Sound.toDomain() = SoundEntity(
+    id,
+    type,
+    ancActivated,
+    frequency,
+    channel,
+    hearingThresholdDifference,
+    avgSoundPressureLevelDifference,
+    instantSoundPressureLevelDifference,
+    avgDistanceDifference,
+    freqInstantIntensityDifference,
+    freqAvgIntensityDifference,
+    lastUpdate,
+    timestamp,
+    patient
+)

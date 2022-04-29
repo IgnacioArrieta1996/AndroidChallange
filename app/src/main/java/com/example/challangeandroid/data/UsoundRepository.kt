@@ -20,9 +20,7 @@ import javax.inject.Inject
 
 class UsoundRepository @Inject constructor(
     private val usoundApi: UsoundApi,
-    private val soundDao: SoundDao
-) :
-    IGetSoundListRepository {
+) : IGetSoundListRepository {
 
     override suspend fun getSoundListFromApi(): Flow<Response<List<Sound>>> = flow {
 
