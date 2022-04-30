@@ -12,6 +12,7 @@
 * Dagger Hilt For Dependecy Injection.
 * Coroutines & Flows.
 * Retrofit.
+* Room
 * UseCase model.
 * Mappers.
 * Base module for base classes.
