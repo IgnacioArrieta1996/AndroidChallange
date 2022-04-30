@@ -17,5 +17,5 @@
 * Mappers.
 * Base module for base classes.
 * Some animations
-* Navigation componens
+* Navigation components
 * Safe args
