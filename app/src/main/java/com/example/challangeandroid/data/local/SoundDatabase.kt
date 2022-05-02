@@ -10,6 +10,7 @@ import com.example.challangeandroid.data.local.entity.SoundEntity
 
 @Database(entities = [SoundEntity::class], version = 1)
 abstract class SoundDatabase : RoomDatabase() {
+
     abstract fun getSoundDao(): SoundDao
 
 }

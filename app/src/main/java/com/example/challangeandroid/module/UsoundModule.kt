@@ -29,7 +29,10 @@ class UsoundModule {
     fun provideUsoundApi(retrofit: Retrofit) = retrofit.create(UsoundApi::class.java)
 
     @Provides
-    fun provideGetSoundUseCase(repository: IGetSoundListRepository, roomRepo: IGetSoundListRoomRepository) = GetSoundUseCase(repository, roomRepo)
+    fun provideGetSoundUseCase(
+        repository: IGetSoundListRepository,
+        roomRepo: IGetSoundListRoomRepository
+    ) = GetSoundUseCase(repository, roomRepo)
 
     @Provides
     fun provideDao(soundDataBase: SoundDatabase): SoundDao {
@@ -58,6 +61,7 @@ abstract class UsoundViewModelData {
     abstract fun bindIGetSoundListRoomRepository(roomRepo: UsoundRepositoryDb): IGetSoundListRoomRepository
 
 }
+
 
 
 

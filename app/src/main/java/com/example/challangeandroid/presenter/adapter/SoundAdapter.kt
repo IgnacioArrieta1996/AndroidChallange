@@ -1,15 +1,13 @@
-package com.androidchallenge.presenter.adapter
+package com.example.challangeandroid.presenter.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
-import android.widget.Filterable
 import androidx.recyclerview.widget.RecyclerView
 import com.example.challangeandroid.R
 import com.example.challangeandroid.domain.model.Sound
-import com.example.challangeandroid.presenter.adapter.SoundViewHolder
 
 class SoundAdapter(
     private val soundList: List<Sound>,
@@ -51,6 +49,4 @@ class SoundAdapter(
 
 
 }
-
-
 

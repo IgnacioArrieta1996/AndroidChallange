@@ -3,8 +3,6 @@ package com.example.challangeandroid.presenter
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.challangeandroid.R
-import com.example.challangeandroid.databinding.ActivityMainBinding
-import com.highquality.base.presenter.BaseActivity
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

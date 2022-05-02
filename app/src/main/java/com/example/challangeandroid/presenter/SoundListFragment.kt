@@ -9,13 +9,12 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
-import com.androidchallenge.presenter.adapter.SoundAdapter
 import com.example.challangeandroid.presenter.viewmodel.UsoundViewModel
 import com.example.challangeandroid.R
 import com.example.challangeandroid.databinding.FragmentSoundListBinding
 import com.example.challangeandroid.domain.model.Sound
+import com.example.challangeandroid.presenter.adapter.SoundAdapter
 import dagger.hilt.android.AndroidEntryPoint
-
 
 @AndroidEntryPoint
 class SoundListFragment : Fragment(R.layout.fragment_sound_list) {

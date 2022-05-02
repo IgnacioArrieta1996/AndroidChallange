@@ -1,13 +1,9 @@
 package com.example.challangeandroid.presenter
 
-
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentContainer
 import androidx.navigation.fragment.navArgs
-import com.androidchallenge.presenter.adapter.SoundAdapter
 import com.example.challangeandroid.R
 import com.example.challangeandroid.databinding.FragmentSoundDetailsBinding
 import dagger.hilt.android.AndroidEntryPoint
